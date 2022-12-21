@@ -1,6 +1,6 @@
 # FilmFolio
 
-<img alt="theThing" width="600px" src="./Assets/The_THING.jpg" />
+<img alt="theThing" width="600px" height="700px" src="./Assets/The_THING.jpg" />
 
 ## General Overview
 
