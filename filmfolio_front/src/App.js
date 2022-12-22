@@ -23,9 +23,7 @@ function App() {
   if(data) {
     return (
       <div className="App">
-        <header className="App-header">
-          <h1> Django React Auth Lesson </h1>
-        </header>
+    
   
         <div>
         {data.map((user) => (
