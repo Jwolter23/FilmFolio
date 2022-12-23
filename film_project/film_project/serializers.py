@@ -15,7 +15,7 @@ class ReviewSerializer(serializers.HyperlinkedModelSerializer):
 
     class Meta:
         model = Review
-        fields = ('id', 'username', 'title', 'body', 'rating', 'users', 'movies')
+        fields = ('id', 'username', 'title', 'body', 'rating', 'movie', 'users', 'movies')
         
 class MovieSerializer(serializers.HyperlinkedModelSerializer):
     reviews = ReviewSerializer(
@@ -30,7 +30,7 @@ class MovieSerializer(serializers.HyperlinkedModelSerializer):
 
     class Meta:
         model = Movie
-        fields = ('id', 'title', 'genre', 'description', 'release_year', 'director', 'actor', 'avg_score', 'photo_url', 'has_watched', 'reviews', 'users')
+        fields = ('id', 'title', 'genre', 'description', 'release_year', 'director', 'actor', 'avg_score', 'photo_url', 'cover_url', 'has_watched', 'reviews', 'users')
 
 class UserSerializer(serializers.HyperlinkedModelSerializer):
     reviews = ReviewSerializer(
