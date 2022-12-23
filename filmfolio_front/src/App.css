@@ -1,19 +1,20 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 .testingClass{
   color: black;
 }
 .grid{
   display: grid;
-  grid-template-columns: repeat(3, minmax(250px, 1fr));
+  grid-template-columns: repeat(4, minmax(250px, 1fr));
+  
 }
-
+.movieTitle{
+  display: flex;
+  justify-content: center;
+}
+.previewText{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .Img{
   max-width: 8em;
   max-height: 12em;
@@ -21,4 +22,12 @@
   flex-direction: row;
 }
 
+.trending{
+  display: flex;
+  justify-content: center;
+}
 
+.navBar{
+  display: flex;
+  justify-content: space-around;
+}

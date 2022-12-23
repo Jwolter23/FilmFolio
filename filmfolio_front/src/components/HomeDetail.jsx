@@ -36,6 +36,7 @@ if(!movieDetail) {
     <div className='detailsPage'>
       <h2>{movieDetail.title}</h2>
       <img className="Img" src={`${movieDetail.photo_url}`}  />
+      <img className="Img" src={`${movieDetail.cover_url}`} />
       <h2>{movieDetail.actor}</h2>
       <h2>{movieDetail.director}</h2>
       <h2>{movieDetail.avg_score}</h2>

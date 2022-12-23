@@ -31,15 +31,15 @@ if(!movies) {
   return(
     <div className='container'>
     <div className="title">
-      <h1>Movies!</h1>
+      <h1 className="trending">Trending Now</h1>
     </div>
     <div className='grid'>
       {
       movies.map((movies)=>(
       <div onClick={() => showMovies(movies)} key={movies.title}
       className='card'>
+      <h2 className="movieTitle">{movies.title}</h2>
       <div className="previewText">
-      <h2>{movies.title}</h2>
       <img className="Img" src={`${movies.photo_url}`}  />
       </div>
       </div>
