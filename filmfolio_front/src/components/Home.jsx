@@ -41,8 +41,6 @@ if(!movies) {
       <div className="previewText">
       <h2>{movies.title}</h2>
       <img className="Img" src={`${movies.photo_url}`}  />
-      {/* <h3>{venues.location}</h3>
-      <h3>{venues.capacity}</h3> */}
       </div>
       </div>
       ))}
