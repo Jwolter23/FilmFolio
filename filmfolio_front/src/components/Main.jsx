@@ -3,6 +3,7 @@ import Home from './Home'
 import Profile from './Profile'
 import Films from './Films'
 import HomeDetail from './HomeDetail'
+import Login from '../pages/auth/Login'
 
 export default function Main (props) {
     return (
@@ -12,6 +13,7 @@ export default function Main (props) {
                 <Route path='/movies/:id' element={<HomeDetail />}/>
                 <Route path='/profile' element={<Profile />}/>
                 <Route path='/films' element={<Films />}/>
+                <Route path='/auth/login' element={<Login />} />
             </Routes>
         </div>
     )
