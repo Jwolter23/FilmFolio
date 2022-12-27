@@ -4,6 +4,8 @@ import Profile from './Profile'
 import Films from './Films'
 import HomeDetail from './HomeDetail'
 import Login from '../pages/auth/Login'
+import Nav from './Nav'
+import Dashboard from '../pages/auth/Dashboard'
 
 export default function Main (props) {
     return (
@@ -14,6 +16,7 @@ export default function Main (props) {
                 <Route path='/profile' element={<Profile />}/>
                 <Route path='/films' element={<Films />}/>
                 <Route path='/auth/login' element={<Login />} />
+                <Route path='/dashboard' element={<Dashboard />} />
             </Routes>
         </div>
     )
