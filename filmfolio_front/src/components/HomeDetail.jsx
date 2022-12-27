@@ -30,23 +30,32 @@ if(!movieDetail) {
 }else{
   return(
     <div className='container'>
+      <div className="imgBlur"></div>
       <div className="cover-url">
       <img className="cover_url" src={`${movieDetail.cover_url}`} />
+      <div className="shadow"></div>
       </div>
     <div className='detailsPage'>
       
       <img className="Img" src={`${movieDetail.photo_url}`}  />
       <div className="detail-info">
           <div className="topRow">
-          <h2 className="title">{movieDetail.title}</h2>
-          <h2 className="release-year">{movieDetail.release_year}</h2>
-          <h2 className="director">Directed By: {movieDetail.director}</h2>
+            <h2 className="title">{movieDetail.title}</h2>
+            <h2 className="release-year">{movieDetail.release_year}</h2>
+            <h2 className="director">Directed By: {movieDetail.director}</h2>
           </div>
-      {/* <h1 className="actors">{movieDetail.actor}</h1>
-      <h2 className="score">{movieDetail.avg_score}</h2>
-      <h2 className="description">{movieDetail.description}</h2>
-      <h2 className="genre">{movieDetail.genre}</h2>
-      <h2 className="ratings">{movieDetail.rating}</h2> */}
+          <div className="middleRow">
+            <h2 className="description">{movieDetail.description}</h2>
+          </div>
+          <div className="castDiv">
+            <h2 className="castName">Cast</h2>
+          </div>
+          <div className="lowerRow">
+            <h1 className="actors">{movieDetail.actor}</h1>
+            <h2 className="score">{movieDetail.avg_score}</h2>
+            {/* <h2 className="genre">{movieDetail.genre}</h2> */}
+            <h2 className="ratings">{movieDetail.rating}</h2>
+          </div>
       </div>
       {/* <h1>Reviews !</h1> */}
       {
