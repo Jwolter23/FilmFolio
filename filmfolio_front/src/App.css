@@ -116,3 +116,10 @@ html{
   font-size: larger;
   text-decoration: underline;
 }
+
+.ratingDiv{
+  display: flex;
+  margin-left: 1em;
+  margin-top: 2em;
+  color: rgb(255, 200, 0);
+}

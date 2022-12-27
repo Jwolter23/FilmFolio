@@ -52,11 +52,14 @@ if(!movieDetail) {
           </div>
           <div className="lowerRow">
             <h1 className="actors">{movieDetail.actor}</h1>
-            <h2 className="score">{movieDetail.avg_score}</h2>
             {/* <h2 className="genre">{movieDetail.genre}</h2> */}
-            <h2 className="ratings">{movieDetail.rating}</h2>
           </div>
+          <div className="ratingDiv">
+            <h2 className="score">Rating: {movieDetail.avg_score} / 5</h2>
+          </div>
+          
       </div>
+      
       {/* <h1>Reviews !</h1> */}
       {
         
@@ -73,6 +76,7 @@ if(!movieDetail) {
       {/* <h2>{movieReview[0].username}</h2> */}
       
       </div>
+      
       </div>
       )}
 }
