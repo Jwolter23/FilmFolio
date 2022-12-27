@@ -1,6 +1,9 @@
 .testingClass{
   color: black;
 }
+html{
+  background-color: rgb(106, 106, 106);
+}
 .grid{
   display: grid;
   grid-template-columns: repeat(4, minmax(250px, 1fr));
@@ -16,11 +19,14 @@
   justify-content: center;
 }
 .Img{
-  max-width: 8em;
-  max-height: 12em;
+  max-width: 10em;
+  max-height: 20em;
   display: flex;
   flex-direction: row;
+  
 }
+
+
 
 .trending{
   display: flex;
@@ -30,4 +36,39 @@
 .navBar{
   display: flex;
   justify-content: space-around;
+}
+
+.title{
+  font-size: 2em;
+  font-weight: bold;
+  color: white;
+}
+.release-year{
+  margin-top: 1em;
+
+}
+.director{
+  margin-top: 1em;
+}
+.detailsPage{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  
+}
+.detail-info{
+  display: flex;
+  flex-direction: row;
+  gap: 1.5em;
+}
+.topRow{
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+  margin-left: 1em;
+}
+
+.cover_url{
+  height: 3em;
+  width: 4em;
 }

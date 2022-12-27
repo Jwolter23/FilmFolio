@@ -30,21 +30,25 @@ if(!movieDetail) {
 }else{
   return(
     <div className='container'>
-    <div className="title">
-      <h1>Movie Details!</h1>
-    </div>
+      <div className="cover-url">
+      <img className="cover_url" src={`${movieDetail.cover_url}`} />
+      </div>
     <div className='detailsPage'>
-      <h2>{movieDetail.title}</h2>
+      
       <img className="Img" src={`${movieDetail.photo_url}`}  />
-      <img className="Img" src={`${movieDetail.cover_url}`} />
-      <h1>{movieDetail.actor}</h1>
-      <h2>{movieDetail.director}</h2>
-      <h2>{movieDetail.avg_score}</h2>
-      <h2>{movieDetail.description}</h2>
-      <h2>{movieDetail.genre}</h2>
-      <h2>{movieDetail.rating}</h2>
-      <h2>{movieDetail.release_year}</h2>
-      <h1>Reviews !</h1>
+      <div className="detail-info">
+          <div className="topRow">
+          <h2 className="title">{movieDetail.title}</h2>
+          <h2 className="release-year">{movieDetail.release_year}</h2>
+          <h2 className="director">Directed By: {movieDetail.director}</h2>
+          </div>
+      {/* <h1 className="actors">{movieDetail.actor}</h1>
+      <h2 className="score">{movieDetail.avg_score}</h2>
+      <h2 className="description">{movieDetail.description}</h2>
+      <h2 className="genre">{movieDetail.genre}</h2>
+      <h2 className="ratings">{movieDetail.rating}</h2> */}
+      </div>
+      {/* <h1>Reviews !</h1> */}
       {
         
         movieReview.map((mreview, id) => (
