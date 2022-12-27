@@ -1,8 +1,14 @@
 import { useState, useEffect } from "react"
 import axios from 'axios'
 import { useParams } from 'react-router-dom'
+import ReactStars from 'react-stars'
+import React from 'react'
+import { render } from 'react-dom'
 
 export default function Home () {
+  const ratingChanged = (newRating) => {
+    console.log(newRating)
+  }
 
 let { id } = useParams()
 
@@ -55,9 +61,18 @@ if(!movieDetail) {
             {/* <h2 className="genre">{movieDetail.genre}</h2> */}
           </div>
           <div className="ratingDiv">
-            <h2 className="score">Rating: {movieDetail.avg_score} / 5</h2>
+            <h2 className="score">Average Rating: {movieDetail.avg_score} / 5</h2>
           </div>
           
+      </div>
+      <div className="ratingBox">
+        <ReactStars
+            count={5}
+            onChange={ratingChanged}
+            size={24}
+            color2={'#ffd700'} />
+      </div>
+
       </div>
       
       {/* <h1>Reviews !</h1> */}
@@ -77,6 +92,5 @@ if(!movieDetail) {
       
       </div>
       
-      </div>
       )}
 }

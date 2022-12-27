@@ -123,3 +123,9 @@ html{
   margin-top: 2em;
   color: rgb(255, 200, 0);
 }
+
+.ratingBox{
+  border: 1px solid black;
+  width: 16em;
+  margin-left: 5em;
+}
