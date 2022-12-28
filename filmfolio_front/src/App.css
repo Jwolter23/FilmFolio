@@ -127,5 +127,16 @@ html{
 .ratingBox{
   border: 1px solid black;
   width: 16em;
+  height: 10em;
   margin-left: 5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.rated{
+  margin-top: 0.4em;
+  margin-left: -1em;
+  margin-right: 0.5em;
 }
