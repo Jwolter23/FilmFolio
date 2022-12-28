@@ -119,20 +119,18 @@ html{
 
 .ratingDiv{
   display: flex;
-  margin-left: 1em;
-  margin-top: 2em;
+  /* margin-left: 1em;
+  margin-top: 2em; */
   color: rgb(255, 200, 0);
 }
 
 .ratingBox{
   border: 1px solid black;
   width: 16em;
-  height: 10em;
-  margin-left: 5em;
+  height: 20em;
   display: flex;
-  justify-content: center;
-  margin-top: 5em;
-  
+  flex-direction: column;
+  justify-content: space-evenly;
   
 }
 .starsDiv{
@@ -140,19 +138,33 @@ html{
   align-items: center;
 }
 
+
+
+
 .rated{
-  margin-left: -1em;
-  margin-right: 0.5em;
   display: flex;
   flex-direction: row;
   align-items: center;
 }
 
 .herocons{
-  position: absolute;
   display: flex;
   flex-direction: row;
   gap: 3em;
-  margin-top: 0.5em;
   border-bottom: 1px solid black;
+  width: 10em;
+
 }
+
+.colorBlue{
+  color: blue;
+}
+
+.colorOrange{
+  color: orange;
+}
+
+.colorGreen{
+  color: green;
+}
+

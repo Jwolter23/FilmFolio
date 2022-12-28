@@ -24,6 +24,7 @@ class Movie(models.Model):
     photo_url = models.CharField(max_length=1000, default='no photo url')
     cover_url = models.CharField(max_length=1000, default='no cover url')
     has_watched = models.BooleanField()
+    star_rating = models.IntegerField(default=1)
     user = models.ManyToManyField(User, related_name='user')
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='movies')
     
