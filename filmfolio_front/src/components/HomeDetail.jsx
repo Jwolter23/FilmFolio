@@ -3,9 +3,9 @@ import axios from 'axios'
 import { useParams } from 'react-router-dom'
 import ReactStars from 'react-stars'
 import React from 'react'
-import { render } from 'react-dom'
+import CreateReview from "./CRUD/CreateReview"
 
-export default function Home () {
+export default function Home (props) {
   const ratingChanged = (newRating) => {
     console.log(newRating)
   }
@@ -57,7 +57,9 @@ if(!movieDetail) {
       <div className="imgBlur"></div>
       <div className="cover-url">
       <img className="cover_url" src={`${movieDetail.cover_url}`} />
+      <div className="shadow2"></div>
       <div className="shadow"></div>
+      
       </div>
     <div className='detailsPage'>
       
@@ -115,12 +117,16 @@ if(!movieDetail) {
       
 
       </div>
-      
-      {/* <h1>Reviews !</h1> */}
+      <h1>Reviews !</h1>
+      <div className="createReview">
+        <CreateReview movieDetail={movieDetail}/>
+      </div>
+      <div className="reviewContainer">
+      <div className="reviewInfo">
       {
         
         movieReview.map((mreview, id) => (
-            <div key={id}>
+            <div className='reviewMap' key={id}>
                     
                 <h2>{mreview.username}</h2>
                 <h3>{mreview.title}</h3>
@@ -130,6 +136,8 @@ if(!movieDetail) {
         ))
       }
       {/* <h2>{movieReview[0].username}</h2> */}
+      </div>
+      </div>
       
       </div>
       
