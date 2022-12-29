@@ -83,7 +83,7 @@ if(!movieDetail) {
           
       </div>
       
-      <div className="ratingBox ml-4 mt-4">
+      <div className="ratingBox ml-4 mt-4 ">
       <div className="rated flex justify-center gap-4">
         <div className="herocons hover:cursor-pointer">
         <svg onClick={toggleClass} className={eye} class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
@@ -117,7 +117,7 @@ if(!movieDetail) {
       
 
       </div>
-      <h1>Reviews !</h1>
+      <h1 className="text-3xl">Reviews !</h1>
       <div className="createReview">
         <CreateReview movieDetail={movieDetail}/>
       </div>
@@ -126,12 +126,12 @@ if(!movieDetail) {
       {
         
         movieReview.map((mreview, id) => (
-            <div className='reviewMap' key={id}>
+            <div className='reviewMap gap-3' key={id}>
                     
                 <h2>{mreview.username}</h2>
-                <h3>{mreview.title}</h3>
+                <h3 className="text-xl">{mreview.title}</h3>
                 <h3>{mreview.body}</h3>
-                <h4>{mreview.rating}</h4>
+                <h4>{mreview.rating} / 5</h4>
             </div>
         ))
       }

@@ -143,6 +143,7 @@ html{
   flex-direction: column;
   justify-content: space-evenly;
   border-radius: 10px;
+  background-color: slategray;
   
 }
 .starsDiv{
@@ -191,10 +192,9 @@ html{
 }
 
 .reviewInfo{
-  position: relative;
   display: flex;
   justify-content: center;
-  width: 90vw;
+  width: 30em;
   height: 10em;
   border: 1px solid green;
   background-color: slategray;

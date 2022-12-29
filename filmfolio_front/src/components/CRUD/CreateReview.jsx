@@ -8,8 +8,10 @@ export default function CreateReview({ movieDetail }) {
     // let navigate = useNavigate();
   const [body, setBody] = useState({
     id: movieDetail.id, 
-    username: movieDetail.title,
+    username: 'jwolter4',
+    title: movieDetail.title,
     body: "",
+    rating: 5
   })
   console.log(movieDetail)
   const handleChange = (e) => {
@@ -27,6 +29,9 @@ export default function CreateReview({ movieDetail }) {
       .then((res) => {
         console.log(res)
         console.log(res.data)
+      })
+      .catch((error) => {
+        console.log(error)
       })
     //   navigate("/comments")
   }
