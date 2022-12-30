@@ -25,7 +25,7 @@ export default function CreateReview({ movieDetail }) {
     console.log(body)
 
     await axios
-      .post(`http://localhost:8000/reviews/${movieDetail.id}`, body)
+      .post(`http://localhost:8000/movies/${movieDetail.id}`, body)
       .then((res) => {
         console.log(res)
         console.log(res.data)
@@ -46,7 +46,7 @@ export default function CreateReview({ movieDetail }) {
           placeholder="Leave comment here"
           autoComplete="off"
           onChange={handleChange}
-          value={body.body}
+          value={body['']}
         />
       
         <button
