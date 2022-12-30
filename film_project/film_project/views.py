@@ -36,7 +36,7 @@ class ReviewPost(generics.RetrieveUpdateDestroyAPIView):
         return Response(serializeobj.errors)
 
 class ReviewUpdate(generics.RetrieveUpdateDestroyAPIView):
-    def post(self,request,pk):
+    def put(self,request,pk):
         try:
             reviewObj=Review.objects.get(pk=pk)
         except:
@@ -49,7 +49,7 @@ class ReviewUpdate(generics.RetrieveUpdateDestroyAPIView):
         return Response(serializeobj.errors)
 
 class ReviewDelete(generics.RetrieveUpdateDestroyAPIView):
-    def post(self,request,pk):
+    def delete(self,request,pk):
         try:
             reviewObj=Review.objects.get(pk=pk)
         except:
