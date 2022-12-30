@@ -33,12 +33,12 @@ class Movie(models.Model):
         return self.title
 
 class Review(models.Model):
-    username = models.CharField(max_length=100, default='no username')
-    title = models.CharField(max_length=100, default='no title')
-    body = models.CharField(max_length=100, default='no body')
-    rating = models.CharField(max_length=100, default='no rating')
-    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='reviews')
-    movie = models.ForeignKey(Movie, on_delete=models.CASCADE, related_name='reviews')
+    username = models.CharField(max_length=100, default='no username', null=True)
+    title = models.CharField(max_length=100, default='no title', null=True)
+    body = models.CharField(max_length=100, default='no body', null=True)
+    rating = models.CharField(max_length=100, default='no rating', null=True)
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='reviews', null=True)
+    movie = models.ForeignKey(Movie, on_delete=models.CASCADE, related_name='reviews', null=True)
     
     
     def __str__(self):

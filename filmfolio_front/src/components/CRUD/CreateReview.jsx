@@ -9,8 +9,8 @@ export default function CreateReview({ movieDetail }) {
   const [body, setBody] = useState({
     id: movieDetail.id, 
     username: 'jwolter4',
-    title: movieDetail.title,
-    body: "",
+    title: '',
+    body: '',
     rating: 5
   })
   console.log(movieDetail)
@@ -25,7 +25,7 @@ export default function CreateReview({ movieDetail }) {
     console.log(body)
 
     await axios
-      .post(`http://localhost:8000/movies/${movieDetail.id}`, body)
+      .post(`http://localhost:8000/reviewspost/`, body)
       .then((res) => {
         console.log(res)
         console.log(res.data)
