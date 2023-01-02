@@ -195,13 +195,19 @@ html{
   display: flex;
   justify-content: center;
   width: 30em;
-  height: 10em;
+  height: 15em;
   border: 1px solid green;
   background-color: slategray;
+  gap: 2em;
 }
 
 .reviewMap{
 display: flex;
 flex-direction: column;
 justify-content: start;
+}
+
+.deleteUpdate{
+  display: flex;
+  gap: 1em;
 }

@@ -136,8 +136,10 @@ if(!movieDetail) {
                 <h3 className="text-xl">{mreview.title}</h3>
                 <h3>{mreview.body}</h3>
                 <h4>{mreview.rating} / 5</h4>
+                <div className="deleteUpdate">
                 <DeleteReview review={mreview.id} />
                 <UpdateReview review={mreview.id} />
+                </div>
             </div>
             
         ))

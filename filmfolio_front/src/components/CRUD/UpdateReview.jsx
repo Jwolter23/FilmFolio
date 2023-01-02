@@ -7,6 +7,9 @@ import { useNavigate } from "react-router-dom";
 export default function EditComment ({review}) {
 // console.log(props)
 
+const [inputVisible, setInputVisible] = useState(false);
+
+
     // let navigate = useNavigate();
 const [body, setbody] = useState({
     body: "",
@@ -36,23 +39,29 @@ const handleSubmit = async (event) => {
 
 return (
     <div className="create-comment-container">
+    <button onClick={() => setInputVisible(!inputVisible)}>Edit</button>
+
     <form onSubmit={handleSubmit}>
+        {inputVisible &&
         <input
-        className="body-section"
+        className="edit-section"
         id="body"
         type="text"
-        placeholder={body}
+        placeholder='Update Review'
         autoComplete="off"
         onChange={handleChange}
         value={body[""]}
         />
+        }
 
+        {inputVisible &&
         <button
         className="post button"
         type="submit"
         >
-        Edit
+        Post Edit
         </button>
+}
     </form>
     </div>
 )
