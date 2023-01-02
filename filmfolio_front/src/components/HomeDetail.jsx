@@ -132,16 +132,24 @@ if(!movieDetail) {
         movieReview.slice(0).reverse().map((mreview, id) => (
             <div className='reviewMap gap-3' key={id}>
                 <div className="indivReview">
-                <div className="upperReview">    
-                <h2 className="musername">Review by: {mreview.username}</h2>
-                <h4 className="mrating">{mreview.rating} / 5</h4>
-                </div>
-                <h3 className="mtitle">{mreview.title}</h3>
-                <h3 className="mbody">{mreview.body}</h3>
-                <div className="deleteUpdate">
-                <DeleteReview review={mreview.id} />
-                <UpdateReview review={mreview.id} />
-                </div>
+                  <div className="upperReview">    
+                    <h2 className="musername">Review by: {mreview.username}</h2>
+                    <h4 className="mrating">
+                      <ReactStars
+                        count={5}
+                        value={mreview.rating}
+                        onChange={ratingChanged}
+                        edit = {false}
+                        size={18}
+                        color2={'#FFA500'} /> 
+                    </h4>
+                  </div>
+                  <h3 className="mtitle">{mreview.title}</h3>
+                  <h3 className="mbody">{mreview.body}</h3>
+                  <div className="deleteUpdate">
+                    <DeleteReview review={mreview.id} />
+                    <UpdateReview review={mreview.id} />
+                  </div>
                 </div>
             </div>
             

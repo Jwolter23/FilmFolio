@@ -1,23 +1,30 @@
 import React from "react"
 import axios from "axios"
 import { useState } from "react"
+import ReactStars from 'react-stars'
 import { useNavigate } from "react-router-dom";
 
 
 export default function CreateReview({ movieDetail: id }) {
-    // let navigate = useNavigate();
+  let newRating = 0
+
+  const ratingChanged = (rating) => {
+    newRating = rating;
+    console.log(newRating)
+  }
+
   const [body, setBody] = useState({
     id: id, 
     username: 'jwolter4',
     title: 'testing',
     body: '',
-    rating: 5,
+    rating: newRating,
     movie:`http://localhost:8000/movies/${id}`
   })
-  // console.log(movieDetail)
+  
   const handleChange = (e) => {
     setBody({ ...body, [e.target.id]: e.target.value })
-    // console.log(movieDetail)
+    
   }
 
   const handleSubmit = async (event) => {
@@ -26,7 +33,10 @@ export default function CreateReview({ movieDetail: id }) {
     console.log(body)
 
     await axios
-      .post(`http://localhost:8000/reviewspost/`, body)
+      .post(`http://localhost:8000/reviewspost/`, {
+        ...body,
+        rating: newRating
+      })
       .then((res) => {
         console.log(res)
         console.log(res.data)
@@ -41,6 +51,12 @@ export default function CreateReview({ movieDetail: id }) {
   return (
     <div className="create-comment-container">
       <form className="create-comment-form" onSubmit={handleSubmit}>
+      <ReactStars
+            count={5}
+            value={newRating}
+            onChange={ratingChanged}
+            size={24}
+            color2={'#FFA500'} />
         <input
           className="body-section"
           id="body"

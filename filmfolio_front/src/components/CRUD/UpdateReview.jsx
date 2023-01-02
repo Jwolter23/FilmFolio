@@ -39,7 +39,7 @@ const handleSubmit = async (event) => {
 
 return (
     <div className="create-comment-container">
-    <button onClick={() => setInputVisible(!inputVisible)}>Edit</button>
+    <button className="update-button" onClick={() => setInputVisible(!inputVisible)}>Edit</button>
 
     <form onSubmit={handleSubmit}>
         {inputVisible &&

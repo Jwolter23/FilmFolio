@@ -248,3 +248,10 @@ position: relative;
 .mbody{
   margin-left: 0.5em;
 }
+
+.delete-button:hover{
+  color: red;
+}
+.update-button:hover{
+  color: green;
+}
