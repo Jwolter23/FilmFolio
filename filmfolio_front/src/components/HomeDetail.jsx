@@ -5,6 +5,8 @@ import ReactStars from 'react-stars'
 import React from 'react'
 import CreateReview from "./CRUD/CreateReview"
 import DeleteReview from "./CRUD/DeleteReview"
+import UpdateReview from "./CRUD/UpdateReview"
+
 
 export default function Home (props) {
   const ratingChanged = (newRating) => {
@@ -135,6 +137,7 @@ if(!movieDetail) {
                 <h3>{mreview.body}</h3>
                 <h4>{mreview.rating} / 5</h4>
                 <DeleteReview review={mreview.id} />
+                <UpdateReview review={mreview.id} />
             </div>
             
         ))
