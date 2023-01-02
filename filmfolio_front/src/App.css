@@ -186,28 +186,65 @@ html{
   border: 1px solid black;
   margin-bottom: 1em;
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  height: 20em;
+  height: 40em;
+  gap: 3em;
 }
 
 .reviewInfo{
-  display: flex;
-  justify-content: center;
+  /* display: flex; */
+  /* justify-content: center;
   width: 30em;
-  height: 15em;
+  height: 50em;
   border: 1px solid green;
-  background-color: slategray;
-  gap: 2em;
+  gap: 2em; */
 }
 
-.reviewMap{
+/* .reviewMap{
 display: flex;
-flex-direction: column;
+flex-direction: row;
 justify-content: start;
-}
+gap: 3em;
+} */
 
 .deleteUpdate{
   display: flex;
+  flex-direction: row;
   gap: 1em;
+  justify-content: end;
+  align-items:center;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.indivReview{
+border: 1px solid black;
+display: flex;
+flex-direction: column;
+height: 13em;
+width: 30em;
+background-color: slategray;
+margin: 3em;
+gap: 0.5em;
+position: relative;
+
+}
+
+.mtitle{
+  display: flex;
+  justify-content: center;
+}
+
+.musername{
+  font-weight: bold;
+}
+
+.upperReview{
+  display: flex;
+  gap: 1em;
+}
+
+.mbody{
+  margin-left: 0.5em;
 }

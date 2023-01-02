@@ -35,6 +35,7 @@ export default function CreateReview({ movieDetail: id }) {
         console.log(error)
       })
     //   navigate("/comments")
+    window.location.reload();
   }
 
   return (

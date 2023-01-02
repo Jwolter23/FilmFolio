@@ -14,6 +14,7 @@ export default function DeleteComment ({review}) {
             console.log(res)
             console.log(res.data)
         })
+        window.location.reload();
         // navigate("/comments")
 
 }
