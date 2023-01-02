@@ -4,6 +4,7 @@ import { useParams } from 'react-router-dom'
 import ReactStars from 'react-stars'
 import React from 'react'
 import CreateReview from "./CRUD/CreateReview"
+import DeleteReview from "./CRUD/DeleteReview"
 
 export default function Home (props) {
   const ratingChanged = (newRating) => {
@@ -119,7 +120,8 @@ if(!movieDetail) {
       </div>
       <h1 className="text-3xl">Reviews !</h1>
       <div className="createReview">
-        <CreateReview movieDetail={movieDetail}/>
+        <CreateReview movieDetail={movieDetail.id}/>
+        
       </div>
       <div className="reviewContainer">
       <div className="reviewInfo">
@@ -132,9 +134,12 @@ if(!movieDetail) {
                 <h3 className="text-xl">{mreview.title}</h3>
                 <h3>{mreview.body}</h3>
                 <h4>{mreview.rating} / 5</h4>
+                <DeleteReview review={mreview.id} />
             </div>
+            
         ))
       }
+      
       {/* <h2>{movieReview[0].username}</h2> */}
       </div>
       </div>

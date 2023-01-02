@@ -4,19 +4,20 @@ import { useState } from "react"
 import { useNavigate } from "react-router-dom";
 
 
-export default function CreateReview({ movieDetail }) {
+export default function CreateReview({ movieDetail: id }) {
     // let navigate = useNavigate();
   const [body, setBody] = useState({
-    id: movieDetail.id, 
+    id: id, 
     username: 'jwolter4',
-    title: '',
+    title: 'testing',
     body: '',
-    rating: 5
+    rating: 5,
+    movie:`http://localhost:8000/movies/${id}`
   })
-  console.log(movieDetail)
+  // console.log(movieDetail)
   const handleChange = (e) => {
     setBody({ ...body, [e.target.id]: e.target.value })
-    console.log(movieDetail)
+    // console.log(movieDetail)
   }
 
   const handleSubmit = async (event) => {
@@ -43,11 +44,12 @@ export default function CreateReview({ movieDetail }) {
           className="body-section"
           id="body"
           type="text"
-          placeholder="Leave comment here"
+          placeholder="Comment here"
           autoComplete="off"
           onChange={handleChange}
           value={body['']}
         />
+        
       
         <button
           className="post-button"
