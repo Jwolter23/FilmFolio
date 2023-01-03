@@ -14,10 +14,11 @@ export default function CreateReview({ movieDetail: id }) {
     console.log(newRating)
   }
 
+  const [username, setUsername] = useState('')
   const [title, setTitle] = useState('')
   const [body, setBody] = useState({
     id: id, 
-    username: 'jwolter4',
+    username: '',
     title: '',
     body: '',
     rating: newRating,
@@ -27,7 +28,9 @@ export default function CreateReview({ movieDetail: id }) {
   })
   
   const handleChange = (e) => {
-    
+
+      setUsername({ ...username, [e.target.id]: e.target.value})
+
       setTitle({ ...title, [e.target.id]: e.target.value})
     
       setBody({ ...body, [e.target.id]: e.target.value })
@@ -71,16 +74,16 @@ export default function CreateReview({ movieDetail: id }) {
       }
       {inputVisible &&
         <input
-          className="body-section"
-          id="body"
+          className="title-section"
+          id="username"
           type="text"
-          placeholder="Comment here"
+          placeholder="Enter a username"
           autoComplete="off"
           onChange={handleChange}
-          value={body['']}
+          value={username['']}
         />
-}
-{inputVisible &&
+      }
+      {inputVisible &&
         <input
           className="title-section"
           id="title"
@@ -91,6 +94,18 @@ export default function CreateReview({ movieDetail: id }) {
           value={title['']}
         />
       }
+      {inputVisible &&
+        <input
+          className="body-section"
+          id="body"
+          type="text"
+          placeholder="Comment here"
+          autoComplete="off"
+          onChange={handleChange}
+          value={body['']}
+        />
+}
+
       {inputVisible &&     
         <button
           className="post-button"
