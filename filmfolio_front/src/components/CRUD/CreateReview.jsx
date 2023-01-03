@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 
 
 export default function CreateReview({ movieDetail: id }) {
+  const [inputVisible, setInputVisible] = useState(false);
   let newRating = 0
 
   const ratingChanged = (rating) => {
@@ -50,13 +51,17 @@ export default function CreateReview({ movieDetail: id }) {
 
   return (
     <div className="create-comment-container">
+      <button className="create-button" onClick={() => setInputVisible(!inputVisible)}>Create Review</button>
       <form className="create-comment-form" onSubmit={handleSubmit}>
+      {inputVisible &&
       <ReactStars
             count={5}
             value={newRating}
             onChange={ratingChanged}
             size={24}
             color2={'#FFA500'} />
+      }
+      {inputVisible &&
         <input
           className="body-section"
           id="body"
@@ -66,14 +71,15 @@ export default function CreateReview({ movieDetail: id }) {
           onChange={handleChange}
           value={body['']}
         />
-        
-      
+}
+      {inputVisible &&     
         <button
           className="post-button"
           type="submit"
         >
           Post
         </button>
+}
       </form>
     </div>
   )

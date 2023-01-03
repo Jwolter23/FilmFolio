@@ -98,12 +98,12 @@ if(!movieDetail) {
         </div>
       </div>
       <div className="starsDiv flex justify-center gap-3">
-      <h2>Your Rating:</h2>
-        <ReactStars
+      <CreateReview movieDetail={movieDetail.id}/>
+        {/* <ReactStars
             count={5}
             onChange={ratingChanged}
             size={24}
-            color2={'#FFA500'} />
+            color2={'#FFA500'} /> */}
       </div>
       <div className="rated2"></div>
       <div className="starsDiv2 flex justify-center gap-1 align-bottom">
@@ -122,7 +122,7 @@ if(!movieDetail) {
       </div>
       <h1 className="text-3xl">Reviews !</h1>
       <div className="createReview">
-        <CreateReview movieDetail={movieDetail.id}/>
+        
         
       </div>
       <div className="reviewContainer">
