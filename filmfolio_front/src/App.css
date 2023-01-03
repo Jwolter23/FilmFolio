@@ -7,7 +7,9 @@ html{
 .grid{
   display: grid;
   grid-template-columns: repeat(4, minmax(250px, 1fr));
-  margin: 2em;
+  gap: 2.5em 0.1em;
+  margin-bottom: 2em;
+  margin-top: 1em;
   justify-content: center;
   
 }
@@ -23,6 +25,7 @@ html{
   justify-content: center;
 
 }
+
 
 .Img {
   border: 4px solid;
@@ -325,3 +328,4 @@ border-bottom: 1px solid slategray;
   width: 3em;
   border-radius: 50%;
 }
+
