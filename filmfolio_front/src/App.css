@@ -84,10 +84,12 @@ html{
 }
 .release-year{
   margin-top: 1em;
+  color: #8192a5;
 
 }
 .director{
   margin-top: 1em;
+  color: #8192a5;
 }
 .detailsPage{
   display: flex;
@@ -107,6 +109,7 @@ html{
   justify-content: center;
   width: 23em;
   margin-top: 2em;
+  color: #8192a5;
   
 }
 .topRow{
@@ -220,13 +223,13 @@ html{
 }
 
 .reviewContainer{
-  margin: 0;
-  border: 1px solid black;
+  /* margin-left: 2em; */
+  /* border: 1px solid black; */
   margin-bottom: 1em;
   display: flex;
   justify-content: center;
-  height: 40em;
-  gap: 3em;
+  height: fit-content;
+  /* gap: 3em; */
 }
 
 .reviewInfo{
@@ -254,28 +257,32 @@ gap: 3em;
   position: absolute;
   bottom: 0;
   right: 0;
+  color: #8192a5;
 }
 
 .indivReview{
-border: 1px solid black;
 display: flex;
 flex-direction: column;
 height: 13em;
 width: 30em;
-background-color: slategray;
 margin: 3em;
 gap: 0.5em;
 position: relative;
+border-top: 1px solid slategray;
+border-bottom: 1px solid slategray;
 
 }
 
 .mtitle{
   display: flex;
   justify-content: center;
+  font-weight: bold;
+  color: #8192a5;
 }
 
 .musername{
   font-weight: bold;
+  color: #8192a5;
 }
 
 .upperReview{
@@ -285,6 +292,8 @@ position: relative;
 
 .mbody{
   margin-left: 0.5em;
+  font-size: larger;
+  color:#8192a5;
 }
 
 .delete-button:hover{
@@ -295,3 +304,9 @@ position: relative;
 }
 
 
+.review-top{
+  font-size: larger;
+  display: flex;
+  justify-content: center;
+  margin-top: 2em;
+}

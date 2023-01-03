@@ -120,7 +120,7 @@ if(!movieDetail) {
       
 
       </div>
-      <h1 className="text-3xl">Reviews !</h1>
+      <h1 className="review-top">Popular Reviews</h1>
       <div className="createReview">
         
         
@@ -155,8 +155,6 @@ if(!movieDetail) {
             
         ))
       }
-      
-      {/* <h2>{movieReview[0].username}</h2> */}
       </div>
       </div>
       
