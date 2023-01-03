@@ -132,7 +132,9 @@ if(!movieDetail) {
         movieReview.slice(0).reverse().map((mreview, id) => (
             <div className='reviewMap gap-3' key={id}>
                 <div className="indivReview">
-                  <div className="upperReview">    
+                  <div className="upperReview">
+                  <img className="mprofile" src={`${mreview.profile_url}`}  />
+                    <div className="align-top-review">  
                     <h2 className="musername">Review by: {mreview.username}</h2>
                     <h4 className="mrating">
                       <ReactStars
@@ -143,9 +145,11 @@ if(!movieDetail) {
                         size={18}
                         color2={'#FFA500'} /> 
                     </h4>
+                    </div>
                   </div>
                   <h3 className="mtitle">{mreview.title}</h3>
                   <h3 className="mbody">{mreview.body}</h3>
+                  
                   <div className="deleteUpdate">
                     <DeleteReview review={mreview.id} />
                     <UpdateReview review={mreview.id} />

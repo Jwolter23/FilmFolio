@@ -35,8 +35,9 @@ class Movie(models.Model):
 class Review(models.Model):
     username = models.CharField(max_length=100, default='no username', null=True)
     title = models.CharField(max_length=100, default='no title', null=True)
-    body = models.CharField(max_length=100, default='no body', null=True)
+    body = models.CharField(max_length=500, default='no body', null=True)
     rating = models.DecimalField(max_digits=2, decimal_places=1, null=True)
+    profile_url = models.CharField(max_length=250, default='no pic', null= True)
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='reviews', null=True)
     movie = models.ForeignKey(Movie, on_delete=models.CASCADE, related_name='reviews', null=True)
     
