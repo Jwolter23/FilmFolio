@@ -14,10 +14,11 @@ export default function CreateReview({ movieDetail: id }) {
     console.log(newRating)
   }
 
+  const [title, setTitle] = useState('')
   const [body, setBody] = useState({
     id: id, 
     username: 'jwolter4',
-    title: 'testing',
+    title: '',
     body: '',
     rating: newRating,
     profile_url: 'https://www.pngitem.com/pimgs/m/150-1503945_transparent-user-png-default-user-image-png-png.png',
@@ -26,7 +27,12 @@ export default function CreateReview({ movieDetail: id }) {
   })
   
   const handleChange = (e) => {
-    setBody({ ...body, [e.target.id]: e.target.value })
+    
+      setTitle({ ...title, [e.target.id]: e.target.value})
+    
+      setBody({ ...body, [e.target.id]: e.target.value })
+    
+    
     
   }
 
@@ -74,6 +80,17 @@ export default function CreateReview({ movieDetail: id }) {
           value={body['']}
         />
 }
+{inputVisible &&
+        <input
+          className="title-section"
+          id="title"
+          type="text"
+          placeholder="Enter a title"
+          autoComplete="off"
+          onChange={handleChange}
+          value={title['']}
+        />
+      }
       {inputVisible &&     
         <button
           className="post-button"

@@ -291,7 +291,7 @@ border-bottom: 1px solid slategray;
 
 .align-top-review{
   display: flex;
-  gap: 1em;
+  gap: 0.6em;
   align-items: center;
 }
 
