@@ -40,7 +40,9 @@ if(!movies) {
       className='card'>
       <h2 className="movieTitle">{movies.title}</h2>
       <div className="previewText">
+      <div className="animationDiv">
       <img className="Img" src={`${movies.photo_url}`}  />
+      </div>
       </div>
       </div>
       ))}
