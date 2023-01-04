@@ -5,25 +5,12 @@ import WatchlistAdd from './CRUD/WatchlistAdd'
 
 
 export default function Profile () {
-    // let navigate = useNavigate()
+    
+    let navigate = useNavigate()
 
-    // const showMovies = (movies) => {
-    //   navigate(`/movies/${movies.id}`)
-    // }
-
-    // const hasWatched = () => {
-    //     if (watched == 'true'){
-    //         axios.put('http://localhost:8000/users/', {
-    //         watched: !watched
-    //     })
-    //     .then(response => {
-    //     console.log(response);
-    //     })
-    //     .catch(error => {
-    //     console.log(error);
-    //     });
-    //     }
-    // }
+    const showMovies = (movies) => {
+        navigate(`/movies/${movies.id}`)
+    }
 
     const [user, setUser] = useState('')
 
@@ -77,7 +64,7 @@ export default function Profile () {
         <div className="filteredContainer">
         <div className="filteredMovies">
         {filteredMovies?.map((movies) => (
-            <div className="filteredCards">
+            <div onClick={() => showMovies(movies)} key={movies.title} className="filteredCards">
             <p  className='filteredTitle'key={movies.title}>{movies.title}</p>
             <img className="Img" src={`${movies.photo_url}`}  />
             </div>
