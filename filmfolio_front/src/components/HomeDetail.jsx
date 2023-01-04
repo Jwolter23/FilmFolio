@@ -9,6 +9,8 @@ import UpdateReview from "./CRUD/UpdateReview"
 
 
 export default function Home (props) {
+
+
   const ratingChanged = (newRating) => {
     console.log(newRating)
   }
