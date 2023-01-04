@@ -5,6 +5,7 @@ import ReactStars from 'react-stars'
 import { useNavigate } from "react-router-dom";
 
 
+
 export default function CreateReview({ movieDetail: id }) {
   const [inputVisible, setInputVisible] = useState(false);
   let newRating = 0
