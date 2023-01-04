@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react"
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
-
+import WatchlistAdd from './CRUD/WatchlistAdd'
 
 
 export default function Profile () {
@@ -11,30 +11,28 @@ export default function Profile () {
     //   navigate(`/movies/${movies.id}`)
     // }
 
-    const hasWatched = () => {
-        if (watched == 'true'){
-            axios.put('http://localhost:8000/users/', {
-            watched: !watched
-        })
-        .then(response => {
-        console.log(response);
-        })
-        .catch(error => {
-        console.log(error);
-        });
-        }
-    }
+    // const hasWatched = () => {
+    //     if (watched == 'true'){
+    //         axios.put('http://localhost:8000/users/', {
+    //         watched: !watched
+    //     })
+    //     .then(response => {
+    //     console.log(response);
+    //     })
+    //     .catch(error => {
+    //     console.log(error);
+    //     });
+    //     }
+    // }
 
-    const [watched, setWatched] = useState('')
-    const [userMovies, setUserMovies] = useState(null)
+    const [movies, setMovies] = useState(null)
 
     useEffect(()=>{
     const getData = async () =>{
-    const response = await axios.get('http://localhost:8000/users/')
-    setUserMovies(response.data[0].movies)
-    console.log(response.data[0].movies)
-    setWatched(response.data[0].movies[6].hasWatched)
-    console.log(response.data[0].movies[6].has_watched)
+    const response = await axios.get('http://localhost:8000/movies/')
+    setMovies(response.data)
+    console.log(response.data)
+    
     
 
     }
@@ -43,12 +41,12 @@ export default function Profile () {
 
 }, [])
 
-if(!userMovies) {
+if(!movies) {
     return <h2>Loading profile</h2>
 }else{
     return (
         <div>
-        <h1>Profile</h1>
+        <WatchlistAdd />
         </div>
     )
 }
