@@ -1,30 +1,32 @@
 import {useState, useEffect} from 'react'
 import axios from 'axios'
 
-export default function Watchlist( {} ) {
-    const [watchlist, setWatchlist] =useState({
-        watchlist: 'true'
-    })
+export default function Watchlist( { watch } ) {
+    const [has_watched, setWatchlist] =useState('true')
 
-    const handleChange = (e) => {
-        setWatchlist({...watchlist, [e.target.id]: e.target.value})
-    }
+
+        const setWatchlistTrue = () => {
+            setWatchlist('true')
+        }
 
     const handleSubmit = async (event) => {
         event.preventDefault()
+        setWatchlistTrue();
+
+        const updatedWatch = { ...watch }
+
+        updatedWatch.has_watched = has_watched
 
         await axios
-        .put(`http://localhost:8000/moviesupdate/${watchlist.id}`, watchlist)
+        .put(`http://localhost:8000/moviesupdate/${watch.id}`, updatedWatch)
     }
 
 
 
 return (
     <div>
-        <form onSubmit={handleSubmit}>
-            <button>
+            <button onClick={handleSubmit}>
                 +
             </button>
-        </form>
     </div>
 )}

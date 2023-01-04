@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react"
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
+import WatchlistAdd from './CRUD/WatchlistAdd'
 
 export default function Home () {
 
@@ -38,6 +39,7 @@ if(!movies) {
       movies.map((movies)=>(
       <div onClick={() => showMovies(movies)} key={movies.title}
       className='card'>
+        
       <h2 className="movieTitle">{movies.title}</h2>
       <div className="previewText">
       <img className="Img" src={`${movies.photo_url}`}  />

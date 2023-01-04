@@ -31,7 +31,7 @@ export default function Profile () {
         const getData = async () =>{
             const response2 = await axios.get('http://localhost:8000/users/')
 
-            setUser(response2.data)
+            setUser(response2.data[0])
             console.log(response2.data)
         }
         getData()
@@ -66,18 +66,16 @@ export default function Profile () {
         <div className="bothDontEdit">
         <div className="userDiv">
         <div className="userInfo">
-        <img className='profile_pic'src={`${user[3].profile_pic}`} />
-        <h3 className="usernameFil">{user[3].username}</h3>
+        <img className='profile_pic'src={`${user.profile_pic}`} />
+        <h3 className="usernameFil">{user.username}</h3>
         </div>
         <div className="infoBoxUser">
-
         </div>
         </div>
+        
         <h3 className="filteredWatch">Watchlist</h3>
         <div className="filteredContainer">
-            
         <div className="filteredMovies">
-            
         {filteredMovies?.map((movies) => (
             <div className="filteredCards">
             <p  className='filteredTitle'key={movies.title}>{movies.title}</p>
