@@ -8,6 +8,7 @@ class User(models.Model):
     email = models.CharField(max_length=100, default='no email')
     password = models.CharField(max_length=100, default='no password')
     username = models.CharField(max_length=100, default='no username')
+    profile_pic = models.CharField(max_length=700, default='no pic')
     
     
     def __str__(self):

@@ -347,3 +347,45 @@ border-bottom: 1px solid slategray;
   display: flex;
   justify-content: center;
 }
+
+.profile_pic{
+  height: 4em;
+  width: 4em;
+  border-radius: 50%;
+}
+
+.filteredWatch{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-size: x-large;
+  font-weight: bold;
+  color: #8192a5;
+  margin-top: 3em;
+}
+
+.userDiv{
+  display: flex;
+  gap: 30em;
+  justify-content: center;
+  
+}
+
+.usernameFil{
+  display: flex;
+  align-items: center;
+  color: #8192a5;
+
+}
+.userInfo{
+  display: flex;
+  gap: 1em;
+  margin-left: 3em;
+}
+
+.infoBoxUser{
+  border: 1px solid black;
+  width: 15em;
+  right: 0;
+  
+}
