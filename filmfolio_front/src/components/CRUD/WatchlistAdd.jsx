@@ -1,9 +1,9 @@
 import {useState, useEffect} from 'react'
 import axios from 'axios'
 
-export default function Watchlist() {
+export default function Watchlist( {} ) {
     const [watchlist, setWatchlist] =useState({
-        watchlist: ''
+        watchlist: 'true'
     })
 
     const handleChange = (e) => {
@@ -14,7 +14,17 @@ export default function Watchlist() {
         event.preventDefault()
 
         await axios
-        .put(`http://localhost:8000/watchlistupdate/${watchlist.id}`, watchlist)
+        .put(`http://localhost:8000/moviesupdate/${watchlist.id}`, watchlist)
     }
 
-}
+
+
+return (
+    <div>
+        <form onSubmit={handleSubmit}>
+            <button>
+                +
+            </button>
+        </form>
+    </div>
+)}

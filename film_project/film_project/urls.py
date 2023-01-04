@@ -12,4 +12,5 @@ urlpatterns = [
     path('reviewspost/', views.ReviewPost.as_view(), name='review_detail'),
     path('reviewsupdate/<int:pk>', views.ReviewUpdate.as_view(), name='review_detail'),
     path('reviewsdelete/<int:pk>', views.ReviewDelete.as_view(), name='review_detail'),
+    path('moviesupdate/<int:pk>', views.MovieUpdate.as_view(), name='review_detail'),
 ]

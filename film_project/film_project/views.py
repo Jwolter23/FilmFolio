@@ -57,6 +57,19 @@ class ReviewDelete(generics.RetrieveUpdateDestroyAPIView):
         reviewObj.delete()
         return Response(200)
 
+class MovieUpdate(generics.RetrieveUpdateDestroyAPIView):
+    def put(self,request,pk):
+        try:
+            reviewObj=Movie.objects.get(pk=pk)
+        except:
+            return Response("Not found in database")
+
+        serializeobj=MovieSerializer(reviewObj,data=request.data)
+        if serializeobj.is_valid():
+            serializeobj.save()
+            return Response(200)
+        return Response(serializeobj.errors)
+
 class ReviewList(generics.ListCreateAPIView):
     queryset = Review.objects.all()
     serializer_class = ReviewSerializer

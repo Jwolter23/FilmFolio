@@ -25,7 +25,12 @@ export default function Profile () {
     //     }
     // }
 
-    const [movies, setMovies] = useState(null)
+    const [movie, setMovies] = useState(null)
+
+    let filteredMovies;
+    if(movie){
+        filteredMovies = movie.filter(movie => movie.has_watched ==='true')
+    }
 
     useEffect(()=>{
     const getData = async () =>{
@@ -41,13 +46,19 @@ export default function Profile () {
 
 }, [])
 
-if(!movies) {
-    return <h2>Loading profile</h2>
-}else{
     return (
-        <div>
-        <WatchlistAdd />
+        <div className="filteredContainer">
+            <h3 className="filteredWatch">Watchlist</h3>
+        <div className="filteredMovies">
+            
+        {filteredMovies?.map(movies => (
+            <div className="filteredCards">
+            <p  className='filteredTitle'key={movies.title}>{movies.title}</p>
+            <img className="Img" src={`${movies.photo_url}`}  />
+            </div>
+        ))}
+        </div>
         </div>
     )
 }
-}
+
