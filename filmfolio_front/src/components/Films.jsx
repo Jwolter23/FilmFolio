@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom'
 
 
 export default function Films () {
-
+  const [inputVisible, setInputVisible] = useState(false);
   let navigate = useNavigate()
 
   const showMovies = (movies) => {
@@ -12,12 +12,13 @@ export default function Films () {
   }
 
   const [movies, setMovies] = useState(null)
-
+  const [displayedMovies, setDisplayedMovies] = useState('')
 useEffect(()=>{
   const getData = async () =>{
   const response = await axios.get('http://localhost:8000/movies/')
   setMovies(response.data)
   console.log(response.data)
+  setDisplayedMovies(response.data)
 
   }
 
@@ -30,12 +31,12 @@ const initialState = {
     search: '',
   }
   
-  const [formState, setFormState] = useState(initialState)
+  const [formState, setFormState] = useState({ search: ''})
   
   const handleSubmit = (event) => {
     event.preventDefault()
     console.log(formState)
-    setFormState(initialState)
+    setFormState({ search: ''})
     searchMovie(formState.search);
   }
   
@@ -50,8 +51,10 @@ const searchMovie = async (title) => {
     const movie = movies.data.find(movie => movie.title.toLowerCase() == title.toLowerCase());
     if (movie) {
       console.log(movie);
+      setDisplayedMovies([movie])
     } else {
       console.log('Movie not found');
+      setDisplayedMovies([])
     }
   }
   
@@ -65,16 +68,20 @@ const searchMovie = async (title) => {
 
 
 
-if(!movies) {
+if(!displayedMovies) {
   return <h2>Loading Home</h2>
 }else{
   return(
     <div className='container'>
     <div className="title">
       <h1 className="trending">Browse our selection</h1>
+      <div className="magnify">
+      <svg onClick={() => setInputVisible(!inputVisible)}class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+      </div>
+      {inputVisible &&
       <form className='submitForm' 
       onSubmit={handleSubmit}>
-        <label htmlFor='search'>Search Movies: </label>
+        <label htmlFor='search'> </label>
         <input className='inputSearch'type='text' 
         placeholder='Input Movie Title'
         id='search' 
@@ -82,16 +89,15 @@ if(!movies) {
         value={formState.search}>
         </input>
         <button type='submit' 
-        onClick={()=>searchMovie()}>Search</button>
+        onClick={()=>searchMovie()}><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16l2.879-2.879m0 0a3 3 0 104.243-4.242 3 3 0 00-4.243 4.242zM21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg></button>
         </form>
+        }
     </div>
-
-
 
 
     <div className='grid'>
       {
-      movies.map((movies)=>(
+      displayedMovies.map((movies)=>(
       <div onClick={() => showMovies(movies)} key={movies.title}
       className='card'>
         

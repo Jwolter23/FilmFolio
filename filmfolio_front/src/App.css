@@ -393,3 +393,20 @@ border-bottom: 1px solid slategray;
 .inputSearch{
   color: black;
 }
+
+.submitForm{
+  display: flex;
+  justify-content: center;
+  margin-top: 1em;
+  margin-bottom: 2em;
+}
+
+.inputSearch{
+  border-radius: 5%;
+}
+
+.magnify{
+  display: flex;
+  justify-content: center;
+  margin-top: 0.5em;
+}
