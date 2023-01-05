@@ -25,17 +25,6 @@ useEffect(()=>{
 
 }, [])
 
-// const [movieSearch, setMovieSearch] = useState(null)
-
-
-//   const getSearch = async () =>{
-//   const response = await axios.get(`http://localhost:8000/movies/${movies.find(e => e.title === formState.search).title}`)
-
-
-//   setMovieSearch(response.data)
-//   console.log(response.data)
-
-//   }
 
 const initialState = {
     search: '',
@@ -58,7 +47,7 @@ const initialState = {
 
 const searchMovie = async (title) => {
     const movies = await axios.get(`http://localhost:8000/movies/`);
-    const movie = movies.data.find(movie => movie.title == title);
+    const movie = movies.data.find(movie => movie.title.toLowerCase() == title.toLowerCase());
     if (movie) {
       console.log(movie);
     } else {
@@ -67,7 +56,6 @@ const searchMovie = async (title) => {
   }
   
   
-
 
 
 
