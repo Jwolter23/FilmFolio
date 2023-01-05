@@ -46,7 +46,8 @@ html{
 
 
 .Img{
-  max-width: 15em;
+  min-width: 16em;
+  max-width: 16em;
   min-height: 23em;
   max-height: 23em;
   display: flex;
