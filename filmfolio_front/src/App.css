@@ -16,8 +16,9 @@ html{
 .movieTitle{
   display: flex;
   justify-content: center;
-  /* color: #8192a5; */
-  font-weight: bold;
+  color: #8192a5;
+  font-weight:bolder;
+  text-shadow: 1px 1px 6px black;
 }
 .previewText{
   display: flex;
@@ -349,6 +350,9 @@ border-bottom: 1px solid slategray;
 .filteredTitle{
   display: flex;
   justify-content: center;
+  color: #8192a5;
+  font-weight:bolder;
+  text-shadow: 1px 1px 6px black;
 }
 
 .profile_pic{

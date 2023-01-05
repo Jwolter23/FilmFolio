@@ -40,7 +40,7 @@ if(!movies) {
       <div onClick={() => showMovies(movies)} key={movies.title}
       className='card'>
         
-      <h2 className="movieTitle" style={{color: `${movies.color}`}}>{movies.title}</h2>
+      <h2 className="movieTitle" >{movies.title}</h2>
       <div className="previewText" >
 
       <img className="Img"  src={`${movies.photo_url}`} style={{
@@ -54,3 +54,4 @@ if(!movies) {
     </div>
   )
 }}
+
