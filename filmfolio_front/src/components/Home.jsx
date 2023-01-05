@@ -44,15 +44,7 @@ if(!movies) {
       <div className="previewText" >
 
       <img className="Img"  src={`${movies.photo_url}`} style={{
-  // border: "4px solid",
   borderImage: `linear-gradient(135deg,${movies.color} 0 10px,${movies.color} 0 20px,${movies.color} 0 30px) 8`,
-  // WebkitMask: "conic-gradient(from 180deg at top 8px right 8px, #0000 90deg,#000 0) var(--_i,200%) 0  /200% var(--_i,8px) border-box no-repeat, conic-gradient(at bottom 8px left  8px,  #0000 90deg,#000 0) 0   var(--_i,200%)/var(--_i,8px) 200% border-box no-repeat, linear-gradient(#000 0 0) padding-box no-repeat",
-  // transition: ".3s, -webkit-mask-position .3s .3s",
-  // '&:hover': {
-  //   '--_i': '100%',
-  //   color: '#CC333F',
-  //   transition: '.3s, -webkit-mask-size .3s .3s',
-  // }
 
 }}></img>   
       </div>

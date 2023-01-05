@@ -66,7 +66,10 @@ export default function Profile () {
         {filteredMovies?.map((movies) => (
             <div onClick={() => showMovies(movies)} key={movies.title} className="filteredCards">
             <p  className='filteredTitle'key={movies.title}>{movies.title}</p>
-            <img className="Img" src={`${movies.photo_url}`}  />
+            <img className="Img" src={`${movies.photo_url}`} style={{
+  borderImage: `linear-gradient(135deg,${movies.color} 0 10px,${movies.color} 0 20px,${movies.color} 0 30px) 8`,
+
+}} />
             </div>
         ))}
         </div>

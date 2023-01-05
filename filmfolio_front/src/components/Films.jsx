@@ -107,7 +107,10 @@ if(!displayedMovies) {
         
       <h2 className="movieTitle">{movies.title}</h2>
       <div className="previewText">
-      <img className="Img" src={`${movies.photo_url}`}  />
+      <img className="Img" src={`${movies.photo_url}`} style={{
+  borderImage: `linear-gradient(135deg,${movies.color} 0 10px,${movies.color} 0 20px,${movies.color} 0 30px) 8`,
+
+}} />
       </div>
       </div>
       ))}
