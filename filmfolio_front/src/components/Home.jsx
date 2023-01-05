@@ -29,6 +29,7 @@ useEffect(()=>{
 if(!movies) {
   return <h2>Loading Home</h2>
 }else{
+  const movieList = movies.slice(0, 8)
   return(
     <div className='container'>
     <div className="title">
@@ -36,7 +37,7 @@ if(!movies) {
     </div>
     <div className='grid'>
       {
-      movies.map((movies)=>(
+      movieList.map((movies)=>(
       <div onClick={() => showMovies(movies)} key={movies.title}
       className='card'>
         

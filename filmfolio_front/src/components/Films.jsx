@@ -1,10 +1,14 @@
 import { useState, useEffect } from "react"
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
+import { useAutoAnimate } from '@formkit/auto-animate/react'
 
 
 export default function Films () {
   const [inputVisible, setInputVisible] = useState(false);
+
+  const [animationParent] = useAutoAnimate({duration: 300})
+  
   let navigate = useNavigate()
 
   const showMovies = (movies) => {
@@ -72,17 +76,17 @@ if(!displayedMovies) {
   return <h2>Loading Home</h2>
 }else{
   return(
-    <div className='container'>
+    <div ref={animationParent}className='container'>
     <div className="title">
       <h1 className="trending">Browse our selection</h1>
-      <div className="magnify">
-      <svg onClick={() => setInputVisible(!inputVisible)}class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+      <div ref={animationParent}className="magnify">
+      <svg ref={animationParent} onClick={() => setInputVisible(!inputVisible)}class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
       </div>
       {inputVisible &&
-      <form className='submitForm' 
+      <form ref={animationParent} className='submitForm' 
       onSubmit={handleSubmit}>
         <label htmlFor='search'> </label>
-        <input className='inputSearch'type='text' 
+        <input ref={animationParent} className='inputSearch'type='text' 
         placeholder='Input Movie Title'
         id='search' 
         onChange={handleChange} 
