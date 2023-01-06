@@ -459,6 +459,7 @@ color: #8192a5;
   display: flex;
   flex-direction: row;
   gap: 4em;
+
   
 }
 
@@ -467,6 +468,7 @@ color: #8192a5;
   flex-direction: row;
   color: #8192a5;
   gap: 1em;
+  font-family: 'Prompt', 'sans-serif';
 }
 
 #five{
@@ -478,7 +480,7 @@ color: #8192a5;
 }
 
 #oneSix{
-  margin-left: 1.6em;
+  margin-left: 2.5em;
   margin-right: -2em;
 }
 
