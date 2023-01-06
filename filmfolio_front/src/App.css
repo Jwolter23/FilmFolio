@@ -364,6 +364,7 @@ border-bottom: 1px solid slategray;
   color: #8192a5;
   font-weight:bolder;
   text-shadow: 1px 1px 6px black;
+  font-family: 'Prompt', 'sans-serif';
 }
 
 .profile_pic{
@@ -378,8 +379,9 @@ border-bottom: 1px solid slategray;
   justify-content: center;
   font-size: x-large;
   font-weight: bold;
-  color: #8192a5;
   margin-top: 3em;
+  font-family: 'Prompt', 'sans-serif';
+  color: white;
 }
 
 .userDiv{
