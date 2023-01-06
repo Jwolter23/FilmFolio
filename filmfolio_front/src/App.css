@@ -403,10 +403,8 @@ border-bottom: 1px solid slategray;
 }
 
 .infoBoxUser{
-  border: 1px solid black;
-  width: 15em;
+  width: 45em;
   right: 0;
-  
 }
 
 .inputSearch{
@@ -447,3 +445,37 @@ color: #8192a5;
 .eye{
   color: blue;
 }
+.boxDetails1{
+  display: flex;
+  flex-direction: row;
+  gap: 8.5em;
+  margin-left: 0.5em;
+}
+
+.boxDetails2{
+  display: flex;
+  flex-direction: row;
+  gap: 4em;
+  
+}
+
+.films1{
+  display: flex;
+  flex-direction: row;
+  color: #8192a5;
+  gap: 1em;
+}
+
+#five{
+  margin-left: -2em;
+}
+
+#four{
+  margin-left: 1.1em;
+}
+
+#oneSix{
+  margin-left: 1.6em;
+  margin-right: -2em;
+}
+

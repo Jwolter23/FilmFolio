@@ -49,6 +49,17 @@ export default function Profile () {
 
 }, [])
 
+function countMovies() {
+    if (filteredMovies) {
+      const movieCount = filteredMovies.length;
+      return <p id='four'className="films1"> {movieCount}</p>;
+    }
+    return <p>No movies in watchlist</p>;
+  }
+    countMovies()
+
+
+
     return (
         <div className="bothDontEdit">
         <div className="userDiv">
@@ -57,6 +68,20 @@ export default function Profile () {
         <h3 className="usernameFil">{user.username}</h3>
         </div>
         <div className="infoBoxUser">
+            <div className="boxDetails1">
+                <p id='24'className="films1">24</p>
+                <p id='five'className="films1">5</p>
+                {countMovies()}
+                <p id='oneSix'className="films1">162</p>
+                <p id='twoThree'className="films1">239</p>
+            </div>
+            <div className="boxDetails2">
+                <p className="films1">Films</p>
+                <p className="films1">This Year</p>
+                <p className="films1">Number in Watchlist</p>
+                <p className="films1">Followers</p>
+                <p className="films1">Following</p>
+            </div>
         </div>
         </div>
         
