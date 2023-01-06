@@ -36,3 +36,17 @@
 
 - A link to my Trello can be found below.
   [Link to Trello](https://trello.com/b/8eG9umom/filmfolio)
+
+## Credits
+
+- I would like to give some credit to:
+- Jack Viana
+- Matt Sweeney
+- Justin Harris
+- For helping me through various design and implementation issues
+
+- Firebase Auth
+  [Link to firebase video](https://www.youtube.com/watch?v=zkz2HuNR_gk)
+
+- Design for hover
+  [Link for hover idea](https://codepen.io/t_afif/pen/rNJegrz)
