@@ -13,8 +13,8 @@ export default function Nav () {
             <Link to='/films' className='links'> Films </Link>
             {!user && (
             <Link to={'/auth/login'}>
-                <a className='py-2 px-4 text-lg bg-teal-500 text-white rounded-lg font-medium ml-8'>
-                    Join now
+                <a className='py-2 px-4 text-lg  text-white rounded-lg font-medium ml-8 testing3'>
+                    Sign In
                 </a>
             </Link>
             )}

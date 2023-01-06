@@ -3,7 +3,7 @@ import axios from "axios"
 import { useState } from "react"
 import ReactStars from 'react-stars'
 import { useNavigate } from "react-router-dom";
-
+import HomeDetail from '../HomeDetail'
 
 
 export default function CreateReview({ movieDetail: id }) {
