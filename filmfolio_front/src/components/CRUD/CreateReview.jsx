@@ -46,7 +46,7 @@ export default function CreateReview({ movieDetail: id }) {
     console.log(body)
 
     await axios
-      .post(`http://localhost:8000/reviewspost/`, {
+      .post(`https://damp-meadow-21641.herokuapp.com/reviewspost/`, {
         ...body,
         rating: newRating
       })

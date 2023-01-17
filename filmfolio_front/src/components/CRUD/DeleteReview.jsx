@@ -9,7 +9,7 @@ export default function DeleteComment ({review}) {
     event.preventDefault()
 
         await axios
-        .delete(`http://localhost:8000/reviewsdelete/${review}`)
+        .delete(`https://damp-meadow-21641.herokuapp.com/reviewsdelete/${review}`)
         .then((res) => {
             console.log(res)
             console.log(res.data)

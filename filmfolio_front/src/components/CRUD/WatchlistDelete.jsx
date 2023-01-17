@@ -19,7 +19,7 @@ export default function Watchlist( { watch, clock, toggleClassTwo } ) {
         updatedWatch.has_watched = has_watched
 
         await axios
-        .put(`http://localhost:8000/moviesupdate/${watch.id}`, updatedWatch)
+        .put(`https://damp-meadow-21641.herokuapp.com/moviesupdate/${watch.id}`, updatedWatch)
     }
 
 

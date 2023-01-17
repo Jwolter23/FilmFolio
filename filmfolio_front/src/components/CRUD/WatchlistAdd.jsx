@@ -21,7 +21,7 @@ export default function Watchlist( { watch, eye, toggleClass } ) {
         
 
         await axios
-        .put(`http://localhost:8000/moviesupdate/${watch.id}`, updatedWatch)
+        .put(`https://damp-meadow-21641.herokuapp.com/moviesupdate/${watch.id}`, updatedWatch)
     }
 
     

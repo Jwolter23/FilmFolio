@@ -28,7 +28,7 @@ const handleSubmit = async (event) => {
     // console.log(body)
 
     await axios
-    .put(`http://localhost:8000/reviewsupdate/${review}`, body)
+    .put(`https://damp-meadow-21641.herokuapp.com/reviewsupdate/${review}`, body)
       // .then((res) => {
       //   console.log(res)
       //   console.log(res.data)
