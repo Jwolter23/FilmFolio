@@ -16,7 +16,7 @@ export default function Profile () {
 
     useEffect(() => {
         const getData = async () =>{
-            const response2 = await axios.get('http://localhost:8000/users/')
+            const response2 = await axios.get('https://damp-meadow-21641.herokuapp.com/users/')
 
             setUser(response2.data[0])
             console.log(response2.data)
@@ -37,7 +37,7 @@ export default function Profile () {
 
     useEffect(()=>{
     const getData = async () =>{
-    const response = await axios.get('http://localhost:8000/movies/')
+    const response = await axios.get('https://damp-meadow-21641.herokuapp.com/movies/')
     setMovies(response.data)
     console.log(response.data)
     

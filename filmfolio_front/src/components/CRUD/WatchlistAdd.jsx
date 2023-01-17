@@ -24,6 +24,7 @@ export default function Watchlist( { watch, eye, toggleClass } ) {
         .put(`http://localhost:8000/moviesupdate/${watch.id}`, updatedWatch)
     }
 
+    
 
 
 return (

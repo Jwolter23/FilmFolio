@@ -19,7 +19,7 @@ export default function Films () {
   const [displayedMovies, setDisplayedMovies] = useState('')
 useEffect(()=>{
   const getData = async () =>{
-  const response = await axios.get('http://localhost:8000/movies/')
+  const response = await axios.get('https://damp-meadow-21641.herokuapp.com/movies/')
   setMovies(response.data)
   console.log(response.data)
   setDisplayedMovies(response.data)
@@ -51,7 +51,7 @@ const initialState = {
 
 
 const searchMovie = async (title) => {
-    const movies = await axios.get(`http://localhost:8000/movies/`);
+    const movies = await axios.get(`https://damp-meadow-21641.herokuapp.com/movies/`);
     const movie = movies.data.find(movie => movie.title.toLowerCase() == title.toLowerCase());
     if (movie) {
       console.log(movie);

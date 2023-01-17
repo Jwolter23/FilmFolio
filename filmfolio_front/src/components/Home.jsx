@@ -14,7 +14,7 @@ export default function Home () {
 
 useEffect(()=>{
   const getData = async () =>{
-  const response = await axios.get('http://localhost:8000/movies/')
+  const response = await axios.get('https://damp-meadow-21641.herokuapp.com/movies/')
   setMovies(response.data)
   console.log(response.data)
 

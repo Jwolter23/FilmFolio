@@ -44,7 +44,7 @@ const [movieReview, setMovieReview] = useState('')
 
 useEffect(()=>{
   const getData = async () =>{
-  const response = await axios.get(`http://localhost:8000/movies/${id}`)
+  const response = await axios.get(`https://damp-meadow-21641.herokuapp.com/movies/${id}`)
   setMovieDetail(response.data)
   setMovieReview(response.data.reviews)
   console.log(response.data.reviews)
