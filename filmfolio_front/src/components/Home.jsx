@@ -30,6 +30,8 @@ if(!movies) {
 }else{
   const movieList = movies.slice(0, 8)
   return(
+    
+    
     <div className='container'>
     <div className="title">
       <h1 className="trending">Trending Now</h1>
@@ -52,6 +54,7 @@ if(!movies) {
       ))}
     </div>
     </div>
+    
   )
 }}
 

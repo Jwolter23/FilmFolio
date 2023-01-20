@@ -2,7 +2,9 @@
 html{
   background-image: linear-gradient(to bottom,#2c3440, #141920);
 
+
 }
+
 .grid{
   display: grid;
   grid-template-columns: repeat(4, minmax(250px, 1fr));
@@ -72,9 +74,8 @@ html{
   display: flex;
   justify-content: center;
   font-family: 'Prompt', sans-serif;
-  
-font-size: 0.8em;
-margin-top: 0.8em;
+  font-size: 0.8em;
+  margin-top: 0.8em;
 }
 
 .navBar{
@@ -96,6 +97,7 @@ margin-top: 0.8em;
   font-weight: bold;
   font-family: 'Prompt', 'sans-serif';
   color: white;
+  gap: 0.5em;
 }
 .release-year{
   margin-top: 1em;
@@ -329,6 +331,7 @@ border-bottom: 1px solid slategray;
   justify-content: center;
   margin-top: 2em;
   font-family: 'Prompt', 'sans-serif';
+  color: #8192a5;
 }
 
 .create-button{
@@ -428,7 +431,7 @@ border-bottom: 1px solid slategray;
 .magnify{
   display: flex;
   justify-content: center;
-  margin-top: 0.5em;
+  margin-top: 0.7em;
 }
 
 .filmHeader{
